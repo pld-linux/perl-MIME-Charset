@@ -50,9 +50,12 @@ MIME.
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_mandir}/ja/man3
 
 %{__make} pure_install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+mv $RPM_BUILD_ROOT%{_mandir}/man3/'MIME::Charset::JA_JP.3pm' $RPM_BUILD_ROOT%{_mandir}/ja/man3/'MIME::Charset.3pm'
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -65,4 +68,5 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorlib}/MIME/Charset/Defaults.pm.sample
 %{perl_vendorlib}/MIME/Charset/JA_JP.pod
 %{perl_vendorlib}/MIME/Charset/_Compat.pm
-%{_mandir}/man3/*
+%{_mandir}/man3/MIME::Charset.3pm*
+%lang(ja) %{_mandir}/ja/man3/MIME::Charset.3pm*
