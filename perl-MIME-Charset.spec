@@ -63,6 +63,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README
 %{perl_vendorlib}/MIME/Charset.pm
+%dir %{perl_vendorlib}/MIME/Charset
 %{perl_vendorlib}/MIME/Charset/Defaults.pm.sample
 %{perl_vendorlib}/MIME/Charset/JA_JP.pod
 %{perl_vendorlib}/MIME/Charset/_Compat.pm
