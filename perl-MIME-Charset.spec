@@ -1,12 +1,4 @@
 #
-############################################################
-#
-# NOTE
-# - use the SOURCES/pldcpan.pl script for new perl packages
-#   also available in pldcpan package.
-#
-############################################################
-#
 # Conditional build:
 %bcond_without	autodeps	# don't BR packages needed only for resolving deps
 %bcond_without	tests	# do not perform "make test"
@@ -18,7 +10,7 @@ Summary:	Charset Informations for MIME
 Summary(pl.UTF-8):	Informacje o zestawach znaków dla MIME
 Name:		perl-MIME-Charset
 Version:	1.006
-Release:	0.1
+Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
