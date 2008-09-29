@@ -14,12 +14,12 @@
 %include	/usr/lib/rpm/macros.perl
 %define		pdir	MIME
 %define		pnam	Charset
-Summary:	-
-Summary(pl.UTF-8):	-
+Summary:	Charset Informations for MIME
+Summary(pl.UTF-8):	Informacje o zestawach znaków dla MIME
 Name:		perl-MIME-Charset
 Version:	1.006
 Release:	0.1
-License:	GPL
+License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	a764906fe10ca4b61badbc2a00cc58fc
@@ -28,25 +28,23 @@ BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-# most of CPAN modules have generic URL (substitute pdir and pnam here)
 
 %description
+MIME::Charset provides informations about character sets used for MIME
+messages on Internet.
 
 %description -l pl.UTF-8
+Moduł perla zawierający informacje o zestawach znaków używanych przez
+MIME.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-# Don't use pipes here: they generally don't work. Apply a patch.
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
 
 %{__make}
-# if module isn't noarch, use:
-# %{__make} \
-#	CC="%{__cc}"
-#	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
 
