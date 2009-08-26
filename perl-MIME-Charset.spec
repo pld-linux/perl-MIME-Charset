@@ -9,12 +9,12 @@
 Summary:	Charset Informations for MIME
 Summary(pl.UTF-8):	Informacje o zestawach znaków dla MIME
 Name:		perl-MIME-Charset
-Version:	1.006.2
+Version:	1.007.1
 Release:	1
 License:	GPL v2
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/MIME/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	22a140a7f323518301d9998bf50e2e17
+# Source0-md5:	fd43133cc9e419a99bcf6ce821c82b9f
 URL:		http://search.cpan.org/dist/MIME-Charset/
 BuildRequires:	perl-Encode >= 1:1.98
 BuildRequires:	perl-devel >= 1:5.8.1
